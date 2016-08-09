@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= yield(:title) %></title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="wrapper">
+  
+  
+  
+  <header>
+  <%= link_to image_tag("http://podiumbuilders.co.nz/rw_common/images/podium%20deep%20red%20logo%20800px.jpg", alt: "Świetna sprawa"),
+  {:controller => 'pages', :action => 'home'},
+  {:class => 'websiteLogo'} %>
+  
+  </header>
+  
+  <nav id="horzNav">
+    
+    <p>
+      <%= link_to 'Home', {:controller => 'pages', :action => 'home' } %>
+      <%= link_to 'About', {:controller => 'pages', :action => 'about' } %>
+      <%= link_to 'Directions', {:controller => 'pages', :action => 'directions' } %>
+      <%= link_to 'Articles', {:controller => 'articles', :action => 'index' } %>
+      <%= link_to 'Users', {:controller => 'users', :action => 'index' } %>
+      
+    </p>
+  </nav>
+  
+  <nav id="sidebar-wrapper">
+       
+        <ul class="pull-left">
+          <li class="left-sidebar-links"><a href="#">Html</a></li>
+          <li class="left-sidebar-links"><a href="#">Css</a></li>
+          <li class="left-sidebar-links"><a href="#">JavaScript</a></li>
+          <li class="left-sidebar-links"><a href="#">Php</a></li>
+          <li class="left-sidebar-links"><a href="#">Mysql</a></li>
+          <li class="left-sidebar-links"><a href="#">Android</a></li>
+          <li class="left-sidebar-links"><a href="#">Rails</a></li>
+          <li class="left-sidebar-links"><a href="#">NodeJS</a></li>
+          <li class="left-sidebar-links"><a href="#">Laravel</a></li>
+          <li class="left-sidebar-links"><a href="#">Marketing</a></li>
+          <li class="left-sidebar-links"><a href="#">Java</a></li>
+          <li class="left-sidebar-links"><a href="#">Lua</a></li>
+          <li class="left-sidebar-links"><a href="#">Python</a></li>
+          <li class="left-sidebar-links"><a href="#">Games</a></li>
+        </ul>
+ 
+      </nav>
+  
+  <main id="content">
+  
+  
+<%= yield %>
+
+  </main>
+  </div>
+
+</div>
+</body>
+</html>
